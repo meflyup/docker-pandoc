@@ -49,6 +49,14 @@ repository.
 
 ## Version Info
 
+### 1.16
+
+  * Debian Jessie (debian:jessie)
+  * TexLive 20141024-2
+  * pandoc 1.16
+  * pandoc-citeproc 0.9
+  * pandoc-crossref 0.1.6.2
+
 ### 1.14.0.1
 
   * Debian Jessie (debian:jessie)
