@@ -1,13 +1,12 @@
 # Pandoc Docker Image
 
 A docker image for running the latest version of 
-[Pandoc](http://pandoc.org) (as seen by `cabal update`). The image 
+[Pandoc](http://pandoc.org) (from the official `.deb` file). The image 
 includes:
 
   * [latex](https://github.com/ivotron/docker-texlive)
   * [pandoc](https://github.com/jgm/pandoc)
   * [pandoc-citeproc](https://github.com/jgm/pandoc-citeproc)
-  * [pandoc-crossref](https://github.com/lierdakil/pandoc-crossref)
 
 ## Usage
 
@@ -48,6 +47,13 @@ For more examples, checkout the
 repository.
 
 ## Version Info
+
+### 1.17
+
+  * Ubuntu Xenial (`ubuntu:xenial`)
+  * TexLive 20160320-1
+  * pandoc 1.17.0.2
+  * pandoc-citeproc 0.9.1.1
 
 ### 1.16
 

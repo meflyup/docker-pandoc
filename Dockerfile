@@ -1,24 +1,11 @@
-FROM ivotron/texlive:20141024-2
+FROM ivotron/texlive:20160320-1
 MAINTAINER Ivo Jimenez <ivo.jimenez@gmail.com>
 
-# install haskell and deps
-RUN apt-get -yq update && apt-get install -qy \
-      curl wget git fontconfig make haskell-platform && \
-    apt-get -yq autoremove && \
+RUN apt-get -yq update && apt-get install -y wget && \
+    wget --no-check-certificate  https://github.com/jgm/pandoc/releases/download/1.17.0.2/pandoc-1.17.0.2-1-amd64.deb && \
+    dpkg -i pandoc-1.17.0.2-1-amd64.deb && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-# install pandoc
-ENV PANDOCVERSION 1.16
-RUN cabal update && \
-    cabal install cabal-install && \
-    ~/.cabal/bin/cabal update && \
-    ~/.cabal/bin/cabal install \
-        pandoc-1.16 \
-        pandoc-citeproc \
-        pandoc-crossref
-
-ENV PATH /root/.cabal/bin/:$PATH
 
 ENTRYPOINT ["pandoc"]
 CMD ["--help"]
