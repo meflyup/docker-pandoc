@@ -1,12 +1,17 @@
 # Pandoc Docker Image
 
-A docker image for running the latest version of 
-[Pandoc](http://pandoc.org) (from the official `.deb` file). The image 
-includes:
+A docker image for running [Pandoc](http://pandoc.org). The image 
+includes the following:
 
   * [latex](https://github.com/ivotron/docker-texlive)
   * [pandoc](https://github.com/jgm/pandoc)
   * [pandoc-citeproc](https://github.com/jgm/pandoc-citeproc)
+
+Some images (see below for versioning info) also include the following 
+packages:
+
+  * [pandoc-crossref](https://github.com/jgm/pandoc-crossref)
+  * [pandocfilters](https://github.com/jgm/pandocfilters)
 
 ## Usage
 
@@ -48,12 +53,19 @@ repository.
 
 ## Version Info
 
-### 1.17
+### 1.17 (1.17.1, latest)
+
+  * Ubuntu Xenial (`ubuntu:xenial`)
+  * TexLive 20160320-1
+  * pandoc 1.17.1
+  * pandoc-citeproc 0.10
+  * pandoc-crossref 0.2.1.3
+
+### 1.17.0.2
 
   * Ubuntu Xenial (`ubuntu:xenial`)
   * TexLive 20160320-1
   * pandoc 1.17.0.2
-  * pandoc-citeproc 0.9.1.1
 
 ### 1.16
 
