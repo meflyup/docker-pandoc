@@ -5,6 +5,9 @@ RUN apt-get -yq update && apt-get install -y haskell-platform python-pip && \
     curl \
     ca-certificates \
     git
+    -t wheezy-backports \
+    vim \
+    && rm -rf /var/lib/apt/lists/*
     cabal update && \
     mkdir pandoc-crossref && \
     cd pandoc-crossref && \
